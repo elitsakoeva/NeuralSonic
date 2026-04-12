@@ -1,0 +1,8 @@
+# Godot-specific ignores
+.godot/imported/
+.godot/mono/
+export_presets.cfg
+
+# Editor
+*.tmp
+*.swp
