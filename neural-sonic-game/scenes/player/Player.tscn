@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://c5d2maifd2q0c"]
+[gd_scene load_steps=3 format=3 uid="uid://c5d2maifd2q0c"]
 
-[node name="Player" type="Node2D"]
+[ext_resource type="Script" uid="uid://tt58281mu6nv" path="res://scenes/player/Player.gd" id="1_wr5hl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gfjak"]
+radius = 8.0
+height = 20.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_wr5hl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_gfjak")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
