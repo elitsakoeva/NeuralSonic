@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://cxfevrui7hlyf"]
+[gd_scene load_steps=4 format=3 uid="uid://cxfevrui7hlyf"]
+
+[ext_resource type="PackedScene" uid="uid://c5d2maifd2q0c" path="res://scenes/player/Player.tscn" id="1_1pwbc"]
+
+[sub_resource type="TileSet" id="TileSet_1pwbc"]
+physics_layer_0/collision_layer = 1
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_j08sa"]
+distance = -5.0
 
 [node name="Level1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_1pwbc")
+format = 2
+
+[node name="Player" parent="." instance=ExtResource("1_1pwbc")]
+position = Vector2(0, 30)
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+position = Vector2(0, -4)
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 45)
+shape = SubResource("WorldBoundaryShape2D_j08sa")

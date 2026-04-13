@@ -14,7 +14,12 @@ config/name="neural-sonic-game"
 run/main_scene="uid://clptwb85bphok"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+run/autoload_on_startup=false
 
 [autoload]
 
 GameManager="*res://scripts/game/game_manager.gd"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
