@@ -1,10 +1,4 @@
-
-  
-
 # NeuralSonic
-
-  
-
   
 
 ## Idea
