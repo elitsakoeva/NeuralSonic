@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var time_label = $TimeLabel
+@onready var rings_label = $RingsLabel
 
 var elapsed_time: float = 0.0
 var is_running: bool = true
@@ -15,6 +16,7 @@ func _process(delta):
 	var seconds = int(elapsed_time) % 60
 	
 	time_label.text = "TIME: %02d:%02d" % [minutes, seconds]
+	rings_label.text = "RINGS: %d" % GameManager.rings
 
 func stop_timer():
 	is_running = false
