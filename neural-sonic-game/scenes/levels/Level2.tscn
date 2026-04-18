@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bm3hwwcnqug57"]
+[gd_scene load_steps=9 format=3 uid="uid://bm3hwwcnqug57"]
 
 [ext_resource type="Texture2D" uid="uid://b0nkyunjtf621" path="res://assets/tilesets/tileset4.png" id="1_a3cud"]
 [ext_resource type="PackedScene" uid="uid://c5d2maifd2q0c" path="res://scenes/player/Player.tscn" id="3_e5vnl"]
 [ext_resource type="PackedScene" uid="uid://dad6apm33pa7m" path="res://scenes/environment/Goal.tscn" id="4_1xtnv"]
 [ext_resource type="Script" uid="uid://tt58281mu6nv" path="res://scenes/player/Player.gd" id="4_twycr"]
+[ext_resource type="PackedScene" uid="uid://qb47cqrvaxbn" path="res://scenes/ui/HUD.tscn" id="5_2p574"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1xtnv"]
 texture = ExtResource("1_a3cud")
@@ -1503,3 +1504,5 @@ shape = SubResource("WorldBoundaryShape2D_j08sa")
 [node name="Goal" parent="." instance=ExtResource("4_1xtnv")]
 position = Vector2(2992, 436)
 next_level = "res://scenes/levels/Level3.tscn"
+
+[node name="Hud" parent="." instance=ExtResource("5_2p574")]
