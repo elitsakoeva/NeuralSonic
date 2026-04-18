@@ -27,3 +27,12 @@ func _physics_process(delta: float) -> void:
 		sprite.play("idle")
 
 	move_and_slide()
+
+func die():
+	GameManager.lives -= 1
+	if GameManager.lives <= 0:
+		GameManager.lives = 3
+		GameManager.rings = 0
+		get_tree().change_scene_to_file("res://scenes/ui/HomeScreen.tscn")
+	else:
+		get_tree().reload_current_scene()
