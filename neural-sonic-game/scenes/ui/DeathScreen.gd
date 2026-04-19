@@ -8,6 +8,9 @@ extends CanvasLayer
 func show_death(level_path: String):
 	visible = true
 	death_label.modulate.a = 0.0
+	player.set_physics_process(false)
+	sprite.play("you_died")
+	player.scale = Vector2(1.0, 1.0)
 	color_rect.modulate.a = 0.0
 	player.modulate.a = 0.0
 	color_rect.color = Color.BLACK
@@ -24,7 +27,7 @@ func show_death(level_path: String):
 	await tween.finished
 	
 	player.set_physics_process(false)
-	sprite.play("you_died")
+	
 	
 	await get_tree().create_timer(2.0).timeout
 	

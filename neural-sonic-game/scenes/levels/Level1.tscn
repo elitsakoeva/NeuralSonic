@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cxfevrui7hlyf"]
+[gd_scene load_steps=16 format=3 uid="uid://cxfevrui7hlyf"]
 
 [ext_resource type="PackedScene" uid="uid://c5d2maifd2q0c" path="res://scenes/player/Player.tscn" id="1_1pwbc"]
 [ext_resource type="Script" uid="uid://4rby0jaj2isv" path="res://scenes/levels/Level1.gd" id="1_7d7pp"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://qb47cqrvaxbn" path="res://scenes/ui/HUD.tscn" id="6_76cw8"]
 [ext_resource type="PackedScene" uid="uid://bmeumx3ayofqs" path="res://scenes/environment/Ring.tscn" id="7_m00rq"]
 [ext_resource type="Script" uid="uid://6fpquuwnut0u" path="res://scenes/levels/DeathZone.gd" id="8_brv20"]
+[ext_resource type="PackedScene" uid="uid://bryh1lsgsmiv1" path="res://scenes/environment/Spike.tscn" id="10_e5nfq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_68ib6"]
 texture = ExtResource("1_fh0io")
@@ -5411,6 +5412,7 @@ shape = SubResource("WorldBoundaryShape2D_j08sa")
 
 [node name="Goal" parent="." instance=ExtResource("5_68ib6")]
 position = Vector2(2052, -107)
+next_level = "res://scenes/levels/Level2.tscn"
 
 [node name="Hud" parent="." instance=ExtResource("6_76cw8")]
 
@@ -5450,3 +5452,6 @@ script = ExtResource("8_brv20")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
 shape = SubResource("RectangleShape2D_m00rq")
+
+[node name="Spike" parent="." instance=ExtResource("10_e5nfq")]
+position = Vector2(365, -41)

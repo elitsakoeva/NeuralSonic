@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://c5d2maifd2q0c"]
+[gd_scene load_steps=69 format=3 uid="uid://c5d2maifd2q0c"]
 
 [ext_resource type="Texture2D" uid="uid://crbw1gs1j1iye" path="res://assets/sprites/sonic-1-sprites.png" id="1_wr5hl"]
 [ext_resource type="Texture2D" uid="uid://bg3vdh4s3pmac" path="res://assets/sprites/victory/1406c7f7-63a4-4245-9cab-acdb00f8ceaf-0.png" id="2_76i7i"]
@@ -46,6 +46,10 @@ radius = 5.0
 [sub_resource type="AtlasTexture" id="AtlasTexture_wr5hl"]
 atlas = ExtResource("1_wr5hl")
 region = Rect2(336, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4b0l"]
+atlas = ExtResource("1_wr5hl")
+region = Rect2(240, 153, 48, 51)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gfjak"]
 atlas = ExtResource("1_wr5hl")
@@ -155,6 +159,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4b0l")
+}],
+"loop": true,
+"name": &"hit",
 "speed": 5.0
 }, {
 "frames": [{
@@ -522,5 +534,4 @@ shape = SubResource("CircleShape2D_wr5hl")
 position = Vector2(1, -4)
 scale = Vector2(0.5104167, 0.5104167)
 sprite_frames = SubResource("SpriteFrames_npwbq")
-animation = &"you_died"
-frame_progress = 0.1821581
+animation = &"hit"
