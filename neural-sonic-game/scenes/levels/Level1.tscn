@@ -5411,7 +5411,6 @@ shape = SubResource("WorldBoundaryShape2D_j08sa")
 
 [node name="Goal" parent="." instance=ExtResource("5_68ib6")]
 position = Vector2(2052, -107)
-next_level = "res://scenes/levels/Level2.tscn"
 
 [node name="Hud" parent="." instance=ExtResource("6_76cw8")]
 
