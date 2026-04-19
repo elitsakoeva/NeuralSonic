@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://o12m66i6ynnk"]
+
+[ext_resource type="Script" uid="uid://cks0rhakvapnu" path="res://scenes/ui/ZoneTransition.gd" id="1_ovm0x"]
+[ext_resource type="FontFile" uid="uid://dw8khfqxus3k5" path="res://assets/fonts/mania.ttf" id="2_e1g2j"]
+
+[sub_resource type="Animation" id="Animation_ovm0x"]
+resource_name = "show"
+length = 0.5
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e1g2j"]
+_data = {
+&"show": SubResource("Animation_ovm0x")
+}
+
+[node name="ZoneTransition" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_ovm0x")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ZoneName" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 250.0
+offset_right = 118.0
+offset_bottom = 277.0
+theme_override_fonts/font = ExtResource("2_e1g2j")
+theme_override_font_sizes/font_size = 48
+text = "ZoneName"
+
+[node name="ZoneAct" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 320.0
+offset_right = 130.00002
+offset_bottom = 353.0
+theme_override_fonts/font = ExtResource("2_e1g2j")
+theme_override_font_sizes/font_size = 32
+text = "ZoneAct"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_e1g2j")
+}
