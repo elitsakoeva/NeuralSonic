@@ -5414,7 +5414,34 @@ next_level = "res://scenes/levels/Level2.tscn"
 [node name="Hud" parent="." instance=ExtResource("6_76cw8")]
 
 [node name="Ring" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(86, -7)
+position = Vector2(144, -56)
+
+[node name="Ring7" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(316, -41)
+
+[node name="Ring8" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(297, -41)
+
+[node name="Ring9" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(276, -41)
+
+[node name="Ring10" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(256, -41)
+
+[node name="Ring2" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(128, -56)
+
+[node name="Ring3" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(208, -24)
+
+[node name="Ring4" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(190, -24)
+
+[node name="Ring5" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(118, -7)
+
+[node name="Ring6" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(102, -7)
 
 [node name="DeathZone" type="Area2D" parent="."]
 position = Vector2(0, 95)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bm3hwwcnqug57"]
+[gd_scene load_steps=12 format=3 uid="uid://bm3hwwcnqug57"]
 
 [ext_resource type="Texture2D" uid="uid://b0nkyunjtf621" path="res://assets/tilesets/tileset4.png" id="1_a3cud"]
 [ext_resource type="Script" uid="uid://ddymh1x8pnk7s" path="res://scenes/levels/Level2.gd" id="1_e5vnl"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dad6apm33pa7m" path="res://scenes/environment/Goal.tscn" id="4_1xtnv"]
 [ext_resource type="Script" uid="uid://tt58281mu6nv" path="res://scenes/player/Player.gd" id="4_twycr"]
 [ext_resource type="PackedScene" uid="uid://qb47cqrvaxbn" path="res://scenes/ui/HUD.tscn" id="5_2p574"]
+[ext_resource type="Script" uid="uid://6fpquuwnut0u" path="res://scenes/levels/DeathZone.gd" id="7_twycr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1xtnv"]
 texture = ExtResource("1_a3cud")
@@ -1480,6 +1481,9 @@ sources/0 = SubResource("TileSetAtlasSource_1xtnv")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_j08sa"]
 distance = -5.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_inlfm"]
+size = Vector2(600, 50)
+
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_e5vnl")
 
@@ -1508,3 +1512,11 @@ position = Vector2(2992, 436)
 next_level = "res://scenes/levels/Level3.tscn"
 
 [node name="Hud" parent="." instance=ExtResource("5_2p574")]
+
+[node name="DeathZone" type="Area2D" parent="."]
+position = Vector2(0, 450)
+script = ExtResource("7_twycr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(1614, -46)
+shape = SubResource("RectangleShape2D_inlfm")
