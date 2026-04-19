@@ -28,7 +28,21 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+var is_dead: bool = false
+
 func die():
+	if is_dead:
+		return
+	is_dead = true
+	sprite.play("death")
+	set_physics_process(false)
+	
+	var tween = create_tween()
+	tween.tween_property(self, "position:y", position.y - 60, 0.3)
+	tween.tween_property(self, "position:y", position.y + 20, 0.2)
+	
+	await get_tree().create_timer(1.0).timeout
+	
 	GameManager.lives -= 1
 	if GameManager.lives <= 0:
 		GameManager.lives = 3
