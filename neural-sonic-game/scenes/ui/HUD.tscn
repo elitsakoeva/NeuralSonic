@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dkf6ekrlb2mgi" path="res://scenes/ui/HUD.gd" id="1_atyv1"]
 [ext_resource type="FontFile" uid="uid://dw8khfqxus3k5" path="res://assets/fonts/mania.ttf" id="1_kw0id"]
 
-[node name="Hud" type="CanvasLayer"]
+[node name="Hud" type="CanvasLayer" groups=["hud"]]
 script = ExtResource("1_atyv1")
 
 [node name="TimeLabel" type="Label" parent="."]

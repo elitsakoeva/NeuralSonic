@@ -20,6 +20,10 @@ run/autoload_on_startup=false
 
 GameManager="*res://scripts/game/game_manager.gd"
 
+[global_group]
+
+hud=""
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
