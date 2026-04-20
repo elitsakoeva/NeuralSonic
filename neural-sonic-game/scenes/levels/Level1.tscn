@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cxfevrui7hlyf"]
+[gd_scene load_steps=15 format=3 uid="uid://cxfevrui7hlyf"]
 
 [ext_resource type="PackedScene" uid="uid://c5d2maifd2q0c" path="res://scenes/player/Player.tscn" id="1_1pwbc"]
 [ext_resource type="Script" uid="uid://4rby0jaj2isv" path="res://scenes/levels/Level1.gd" id="1_7d7pp"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bmeumx3ayofqs" path="res://scenes/environment/Ring.tscn" id="7_m00rq"]
 [ext_resource type="Script" uid="uid://6fpquuwnut0u" path="res://scenes/levels/DeathZone.gd" id="8_brv20"]
 [ext_resource type="PackedScene" uid="uid://bryh1lsgsmiv1" path="res://scenes/environment/Spike.tscn" id="10_e5nfq"]
+[ext_resource type="PackedScene" uid="uid://b1iac132imgd" path="res://scenes/environment/Spring.tscn" id="10_lha2r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_76cw8"]
 texture = ExtResource("3_68ib6")
@@ -3873,7 +3874,7 @@ position = Vector2(1471, -207)
 position = Vector2(1452, -207)
 
 [node name="Ring35" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1415, -141)
+position = Vector2(1370, -141)
 
 [node name="Ring36" parent="." instance=ExtResource("7_m00rq")]
 position = Vector2(1900, -108)
@@ -3888,13 +3889,13 @@ position = Vector2(1686, -108)
 position = Vector2(1668, -108)
 
 [node name="Ring40" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1399, -141)
+position = Vector2(1353, -141)
 
 [node name="Ring41" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1447, -141)
+position = Vector2(1404, -141)
 
 [node name="Ring42" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1431, -141)
+position = Vector2(1387, -141)
 
 [node name="Ring43" parent="." instance=ExtResource("7_m00rq")]
 position = Vector2(1649, -108)
@@ -3903,10 +3904,10 @@ position = Vector2(1649, -108)
 position = Vector2(1631, -108)
 
 [node name="Ring45" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1940, -108)
+position = Vector2(1937, -108)
 
 [node name="Ring46" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1921, -108)
+position = Vector2(1918, -108)
 
 [node name="Ring47" parent="." instance=ExtResource("7_m00rq")]
 position = Vector2(2353, -96)
@@ -3943,3 +3944,67 @@ position = Vector2(2524, -95)
 
 [node name="Ring58" parent="." instance=ExtResource("7_m00rq")]
 position = Vector2(2505, -95)
+
+[node name="Ring59" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(2013, -108)
+
+[node name="Ring60" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1994, -108)
+
+[node name="Ring61" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1975, -108)
+
+[node name="Ring62" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1956, -108)
+
+[node name="Ring63" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(2051, -108)
+
+[node name="Ring64" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(2032, -108)
+
+[node name="Ring65" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(2069, -108)
+
+[node name="Ring66" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1433, -207)
+
+[node name="Ring67" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1414, -207)
+
+[node name="Ring68" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1395, -207)
+
+[node name="Ring69" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1377, -207)
+
+[node name="Ring70" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1471, -207)
+
+[node name="Ring71" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1452, -207)
+
+[node name="Ring72" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1438, -141)
+
+[node name="Ring73" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1421, -141)
+
+[node name="Ring74" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1472, -141)
+
+[node name="Ring75" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1455, -141)
+
+[node name="Ring76" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1505, -141)
+
+[node name="Ring77" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1488, -141)
+
+[node name="Ring78" parent="." instance=ExtResource("7_m00rq")]
+position = Vector2(1522, -141)
+
+[node name="Spring" parent="." instance=ExtResource("10_lha2r")]
+position = Vector2(56, 15.000001)
+scale = Vector2(3, 3)

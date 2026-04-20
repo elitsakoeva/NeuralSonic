@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1iac132imgd"]
+
+[ext_resource type="Script" uid="uid://cifntemoeex4i" path="res://scenes/environment/Spring.gd" id="1_t1tba"]
+[ext_resource type="Texture2D" uid="uid://bkexc31k74dlt" path="res://assets/sprites/spring.png" id="2_icawt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1tba"]
+atlas = ExtResource("2_icawt")
+region = Rect2(64, 38, 32, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icawt"]
+atlas = ExtResource("2_icawt")
+region = Rect2(64, 56, 32, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4c6wu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1tba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icawt")
+}],
+"loop": true,
+"name": &"bounce",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1tba")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1haq"]
+
+[node name="Spring" type="Area2D"]
+script = ExtResource("1_t1tba")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.46739194, -1.3107728)
+scale = Vector2(0.16747828, 0.17441204)
+sprite_frames = SubResource("SpriteFrames_4c6wu")
+animation = &"bounce"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_c1haq")
