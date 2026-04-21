@@ -1,8 +1,8 @@
 extends Control
 
-@onready var play_button = $VBoxContainer/Play
-@onready var ai_button = $VBoxContainer/AIMode
-@onready var exit_button = $VBoxContainer/Exit
+@onready var play_button = $Play
+@onready var ai_button = $AIMode
+@onready var exit_button = $Exit
 
 
 func _ready():
