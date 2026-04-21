@@ -1526,64 +1526,64 @@ position = Vector2(-525, -60)
 position = Vector2(-842, -167)
 
 [node name="Ring91" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1305, -361)
+position = Vector2(-1302, -358)
 
 [node name="Ring92" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1379, -361)
+position = Vector2(-1376, -358)
 
 [node name="Ring93" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1305, -345)
+position = Vector2(-1302, -342)
 
 [node name="Ring94" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1379, -345)
+position = Vector2(-1376, -342)
 
 [node name="Ring95" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1267, -361)
+position = Vector2(-1264, -358)
 
 [node name="Ring96" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1286, -361)
+position = Vector2(-1283, -358)
 
 [node name="Ring97" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1267, -345)
+position = Vector2(-1264, -342)
 
 [node name="Ring98" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1286, -345)
+position = Vector2(-1283, -342)
 
 [node name="Ring99" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1267, -361)
+position = Vector2(-1264, -358)
 
 [node name="Ring100" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1286, -361)
+position = Vector2(-1283, -358)
 
 [node name="Ring101" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1267, -345)
+position = Vector2(-1264, -342)
 
 [node name="Ring102" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1286, -345)
+position = Vector2(-1283, -342)
 
 [node name="Ring103" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1397, -361)
+position = Vector2(-1394, -358)
 
 [node name="Ring104" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1415, -361)
+position = Vector2(-1412, -358)
 
 [node name="Ring105" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1397, -345)
+position = Vector2(-1394, -342)
 
 [node name="Ring106" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1415, -345)
+position = Vector2(-1412, -342)
 
 [node name="Ring107" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1397, -361)
+position = Vector2(-1394, -358)
 
 [node name="Ring108" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1415, -361)
+position = Vector2(-1412, -358)
 
 [node name="Ring109" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1397, -345)
+position = Vector2(-1394, -342)
 
 [node name="Ring110" parent="Goal" instance=ExtResource("5_f3pvd")]
-position = Vector2(-1415, -345)
+position = Vector2(-1412, -342)
 
 [node name="Ring111" parent="Goal" instance=ExtResource("5_f3pvd")]
 position = Vector2(-1113, -407)
@@ -1644,6 +1644,66 @@ position = Vector2(-1205, -391)
 
 [node name="Ring130" parent="Goal" instance=ExtResource("5_f3pvd")]
 position = Vector2(-1223, -391)
+
+[node name="Ring151" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-1983, -333)
+
+[node name="Ring152" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-2067, -334)
+
+[node name="Ring153" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-2001, -333)
+
+[node name="Ring154" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-2019, -333)
+
+[node name="Ring155" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-2085, -334)
+
+[node name="Ring156" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-2103, -334)
+
+[node name="Ring157" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-2001, -333)
+
+[node name="Ring158" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-2019, -333)
+
+[node name="Ring159" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-2085, -334)
+
+[node name="Ring160" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-2103, -334)
+
+[node name="Ring161" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-1821, -332)
+
+[node name="Ring162" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-1905, -333)
+
+[node name="Ring163" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-1839, -332)
+
+[node name="Ring164" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-1857, -332)
+
+[node name="Ring165" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-1923, -333)
+
+[node name="Ring166" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-1941, -333)
+
+[node name="Ring167" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-1839, -332)
+
+[node name="Ring168" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-1857, -332)
+
+[node name="Ring169" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-1923, -333)
+
+[node name="Ring170" parent="Goal" instance=ExtResource("5_f3pvd")]
+position = Vector2(-1941, -333)
 
 [node name="Ring131" parent="Goal" instance=ExtResource("5_f3pvd")]
 position = Vector2(-918, -452)
@@ -1803,6 +1863,30 @@ position = Vector2(1591, 39)
 
 [node name="Spike8" parent="." instance=ExtResource("1_3825t")]
 position = Vector2(1570, 39)
+
+[node name="Spike11" parent="." instance=ExtResource("1_3825t")]
+position = Vector2(1697, 39)
+
+[node name="Spike12" parent="." instance=ExtResource("1_3825t")]
+position = Vector2(1718, 39)
+
+[node name="Spike13" parent="." instance=ExtResource("1_3825t")]
+position = Vector2(1781, 39)
+
+[node name="Spike14" parent="." instance=ExtResource("1_3825t")]
+position = Vector2(1802, 39)
+
+[node name="Spike15" parent="." instance=ExtResource("1_3825t")]
+position = Vector2(1823, 39)
+
+[node name="Spike16" parent="." instance=ExtResource("1_3825t")]
+position = Vector2(1844, 39)
+
+[node name="Spike17" parent="." instance=ExtResource("1_3825t")]
+position = Vector2(1760, 39)
+
+[node name="Spike18" parent="." instance=ExtResource("1_3825t")]
+position = Vector2(1739, 39)
 
 [node name="Spike9" parent="." instance=ExtResource("1_3825t")]
 position = Vector2(1504, 311)
