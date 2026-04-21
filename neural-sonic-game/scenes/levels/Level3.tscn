@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://f7h8jra26ytu"]
+[gd_scene load_steps=15 format=3 uid="uid://f7h8jra26ytu"]
 
 [ext_resource type="PackedScene" uid="uid://bryh1lsgsmiv1" path="res://scenes/environment/Spike.tscn" id="1_3825t"]
 [ext_resource type="Script" uid="uid://bw1gtu8u3qpxn" path="res://scenes/levels/Level3.gd" id="1_stl8g"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bmeumx3ayofqs" path="res://scenes/environment/Ring.tscn" id="5_f3pvd"]
 [ext_resource type="Script" uid="uid://6fpquuwnut0u" path="res://scenes/levels/DeathZone.gd" id="6_6qpip"]
 [ext_resource type="PackedScene" uid="uid://b1iac132imgd" path="res://scenes/environment/Spring.tscn" id="8_x3k3d"]
+[ext_resource type="PackedScene" uid="uid://qb47cqrvaxbn" path="res://scenes/ui/HUD.tscn" id="10_h66bl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f3pvd"]
 texture = ExtResource("2_6qpip")
@@ -2866,3 +2867,5 @@ scale = Vector2(3, 3)
 [node name="Spring2" parent="." instance=ExtResource("8_x3k3d")]
 position = Vector2(1227, 47)
 scale = Vector2(3, 3)
+
+[node name="Hud" parent="." instance=ExtResource("10_h66bl")]
