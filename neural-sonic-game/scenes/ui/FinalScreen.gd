@@ -27,7 +27,7 @@ func _ready():
 func _run_to_center():
 	
 	var tween = create_tween()
-	tween.tween_property(player, "position:x", target_x, 2.0).set_ease(Tween.EASE_OUT)
+	tween.tween_property(player, "position:x", target_x, 1.0).set_ease(Tween.EASE_OUT)
 	await tween.finished
 	
 	
