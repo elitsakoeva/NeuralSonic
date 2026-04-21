@@ -20,7 +20,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_icawt")
 }],
-"loop": true,
+"loop": false,
 "name": &"bounce",
 "speed": 5.0
 }, {
