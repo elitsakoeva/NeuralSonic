@@ -3854,16 +3854,16 @@ position = Vector2(749, -155)
 position = Vector2(1255, -138)
 
 [node name="Ring24" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1433, -207)
+position = Vector2(1430, -202)
 
 [node name="Ring25" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1414, -207)
+position = Vector2(1411, -202)
 
 [node name="Ring26" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1395, -207)
+position = Vector2(1392, -202)
 
 [node name="Ring27" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1377, -207)
+position = Vector2(1374, -202)
 
 [node name="Ring28" parent="." instance=ExtResource("7_m00rq")]
 position = Vector2(1239, -138)
@@ -3881,10 +3881,10 @@ position = Vector2(1032, -136)
 position = Vector2(1016, -136)
 
 [node name="Ring33" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1471, -207)
+position = Vector2(1468, -202)
 
 [node name="Ring34" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1452, -207)
+position = Vector2(1449, -202)
 
 [node name="Ring35" parent="." instance=ExtResource("7_m00rq")]
 position = Vector2(1371, -138)
@@ -3980,22 +3980,22 @@ position = Vector2(2032, -105)
 position = Vector2(2069, -105)
 
 [node name="Ring66" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1433, -207)
+position = Vector2(2663, -88)
 
 [node name="Ring67" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1414, -207)
+position = Vector2(2678, -88)
 
 [node name="Ring68" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1395, -207)
+position = Vector2(2618, -88)
 
 [node name="Ring69" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1377, -207)
+position = Vector2(2633, -88)
 
 [node name="Ring70" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1471, -207)
+position = Vector2(2693, -88)
 
 [node name="Ring71" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1452, -207)
+position = Vector2(2648, -88)
 
 [node name="Ring72" parent="." instance=ExtResource("7_m00rq")]
 position = Vector2(1439, -138)
