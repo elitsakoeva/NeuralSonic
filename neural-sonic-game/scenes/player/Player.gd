@@ -44,7 +44,7 @@ func die():
 	var tween = create_tween()
 	tween.tween_property(self, "position:y", position.y - 25, 0.2)
 	
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.5).timeout
 	
 	GameManager.lives -= 1
 	if GameManager.lives <= 0:
