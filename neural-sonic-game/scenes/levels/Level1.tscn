@@ -3731,7 +3731,7 @@ sources/3 = SubResource("TileSetAtlasSource_76cw8")
 distance = -5.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m00rq"]
-size = Vector2(10000, 50)
+size = Vector2(2321.5, 100)
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_7d7pp")
@@ -3756,7 +3756,7 @@ position = Vector2(0, 600)
 shape = SubResource("WorldBoundaryShape2D_j08sa")
 
 [node name="Goal" parent="." instance=ExtResource("5_68ib6")]
-position = Vector2(2783, -123)
+position = Vector2(2786, -120)
 next_level = "res://scenes/levels/Level2.tscn"
 
 [node name="Hud" parent="." instance=ExtResource("6_76cw8")]
@@ -3796,10 +3796,23 @@ position = Vector2(0, 95)
 script = ExtResource("8_brv20")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(1952.25, -66)
 shape = SubResource("RectangleShape2D_m00rq")
 
 [node name="Spike" parent="." instance=ExtResource("10_e5nfq")]
 position = Vector2(365, -41)
+
+[node name="Spike2" parent="." instance=ExtResource("10_e5nfq")]
+position = Vector2(315, -89)
+
+[node name="Spike3" parent="." instance=ExtResource("10_e5nfq")]
+position = Vector2(807, -138)
+
+[node name="Spike4" parent="." instance=ExtResource("10_e5nfq")]
+position = Vector2(1583, -105)
+
+[node name="Spike5" parent="." instance=ExtResource("10_e5nfq")]
+position = Vector2(1583, -105)
 
 [node name="Ring11" parent="." instance=ExtResource("7_m00rq")]
 position = Vector2(522, -106)
@@ -3838,7 +3851,7 @@ position = Vector2(768, -155)
 position = Vector2(749, -155)
 
 [node name="Ring23" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1256, -144)
+position = Vector2(1255, -138)
 
 [node name="Ring24" parent="." instance=ExtResource("7_m00rq")]
 position = Vector2(1433, -207)
@@ -3853,19 +3866,19 @@ position = Vector2(1395, -207)
 position = Vector2(1377, -207)
 
 [node name="Ring28" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1240, -144)
+position = Vector2(1239, -138)
 
 [node name="Ring29" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1145, -143)
+position = Vector2(1144, -137)
 
 [node name="Ring30" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1129, -143)
+position = Vector2(1128, -137)
 
 [node name="Ring31" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1032, -140)
+position = Vector2(1032, -136)
 
 [node name="Ring32" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1016, -140)
+position = Vector2(1016, -136)
 
 [node name="Ring33" parent="." instance=ExtResource("7_m00rq")]
 position = Vector2(1471, -207)
@@ -3874,97 +3887,97 @@ position = Vector2(1471, -207)
 position = Vector2(1452, -207)
 
 [node name="Ring35" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1370, -141)
+position = Vector2(1371, -138)
 
 [node name="Ring36" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1900, -108)
+position = Vector2(1900, -105)
 
 [node name="Ring37" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1881, -108)
+position = Vector2(1881, -105)
 
 [node name="Ring38" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1686, -108)
+position = Vector2(1686, -105)
 
 [node name="Ring39" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1668, -108)
+position = Vector2(1668, -105)
 
 [node name="Ring40" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1353, -141)
+position = Vector2(1354, -138)
 
 [node name="Ring41" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1404, -141)
+position = Vector2(1405, -138)
 
 [node name="Ring42" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1387, -141)
+position = Vector2(1388, -138)
 
 [node name="Ring43" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1649, -108)
+position = Vector2(1649, -105)
 
 [node name="Ring44" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1631, -108)
+position = Vector2(1631, -105)
 
 [node name="Ring45" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1937, -108)
+position = Vector2(1937, -105)
 
 [node name="Ring46" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1918, -108)
+position = Vector2(1918, -105)
 
 [node name="Ring47" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2353, -96)
+position = Vector2(2353, -89)
 
 [node name="Ring48" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2486, -95)
+position = Vector2(2486, -90)
 
 [node name="Ring49" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2467, -95)
+position = Vector2(2467, -90)
 
 [node name="Ring50" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2448, -95)
+position = Vector2(2448, -90)
 
 [node name="Ring51" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2430, -95)
+position = Vector2(2430, -90)
 
 [node name="Ring52" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2337, -96)
+position = Vector2(2337, -89)
 
 [node name="Ring53" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2256, -97)
+position = Vector2(2256, -90)
 
 [node name="Ring54" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2240, -97)
+position = Vector2(2240, -90)
 
 [node name="Ring55" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2162, -95)
+position = Vector2(2162, -88)
 
 [node name="Ring56" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2146, -95)
+position = Vector2(2146, -88)
 
 [node name="Ring57" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2524, -95)
+position = Vector2(2524, -90)
 
 [node name="Ring58" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2505, -95)
+position = Vector2(2505, -90)
 
 [node name="Ring59" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2013, -108)
+position = Vector2(2013, -105)
 
 [node name="Ring60" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1994, -108)
+position = Vector2(1994, -105)
 
 [node name="Ring61" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1975, -108)
+position = Vector2(1975, -105)
 
 [node name="Ring62" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1956, -108)
+position = Vector2(1956, -105)
 
 [node name="Ring63" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2051, -108)
+position = Vector2(2051, -105)
 
 [node name="Ring64" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2032, -108)
+position = Vector2(2032, -105)
 
 [node name="Ring65" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(2069, -108)
+position = Vector2(2069, -105)
 
 [node name="Ring66" parent="." instance=ExtResource("7_m00rq")]
 position = Vector2(1433, -207)
@@ -3985,26 +3998,26 @@ position = Vector2(1471, -207)
 position = Vector2(1452, -207)
 
 [node name="Ring72" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1438, -141)
+position = Vector2(1439, -138)
 
 [node name="Ring73" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1421, -141)
+position = Vector2(1422, -138)
 
 [node name="Ring74" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1472, -141)
+position = Vector2(1473, -138)
 
 [node name="Ring75" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1455, -141)
+position = Vector2(1456, -138)
 
 [node name="Ring76" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1505, -141)
+position = Vector2(1544, -123)
 
 [node name="Ring77" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1488, -141)
+position = Vector2(1489, -138)
 
 [node name="Ring78" parent="." instance=ExtResource("7_m00rq")]
-position = Vector2(1522, -141)
+position = Vector2(1561, -123)
 
 [node name="Spring" parent="." instance=ExtResource("10_lha2r")]
-position = Vector2(56, 15.000001)
+position = Vector2(1517, -129)
 scale = Vector2(3, 3)

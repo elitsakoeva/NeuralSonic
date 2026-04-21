@@ -6,4 +6,4 @@ func _ready():
 	GameManager.rings = 0
 	var transition = preload("res://scenes/ui/ZoneTransition.tscn").instantiate()
 	add_child(transition)
-	await transition.show_transition("GREEN ZONE", "ACT 2")
+	await transition.show_transition("CIAN ZONE", "ACT 3")

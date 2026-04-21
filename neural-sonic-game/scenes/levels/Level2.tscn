@@ -1510,6 +1510,7 @@ shape = SubResource("WorldBoundaryShape2D_j08sa")
 
 [node name="Goal" parent="." instance=ExtResource("4_1xtnv")]
 position = Vector2(2992, 436)
+next_level = "res://scenes/levels/Level3.tscn"
 
 [node name="Hud" parent="." instance=ExtResource("5_2p574")]
 
@@ -1570,166 +1571,166 @@ position = Vector2(441, 20)
 position = Vector2(458, 20)
 
 [node name="Ring17" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(657, 241)
+position = Vector2(654, 245)
 
 [node name="Ring18" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(674, 241)
+position = Vector2(671, 245)
 
 [node name="Ring19" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(691, 241)
+position = Vector2(688, 245)
 
 [node name="Ring20" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(708, 241)
+position = Vector2(705, 245)
 
 [node name="Ring21" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(724, 241)
+position = Vector2(721, 245)
 
 [node name="Ring22" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(741, 241)
+position = Vector2(738, 245)
 
 [node name="Ring23" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(758, 241)
+position = Vector2(755, 245)
 
 [node name="Ring24" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(775, 241)
+position = Vector2(772, 245)
 
 [node name="Ring25" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(657, 222)
+position = Vector2(654, 226)
 
 [node name="Ring26" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(674, 222)
+position = Vector2(671, 226)
 
 [node name="Ring27" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(691, 222)
+position = Vector2(688, 226)
 
 [node name="Ring28" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(708, 222)
+position = Vector2(705, 226)
 
 [node name="Ring29" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(724, 222)
+position = Vector2(721, 226)
 
 [node name="Ring30" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(741, 222)
+position = Vector2(738, 226)
 
 [node name="Ring31" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(758, 222)
+position = Vector2(755, 226)
 
 [node name="Ring32" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(775, 222)
+position = Vector2(772, 226)
 
 [node name="Ring33" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(657, 202)
+position = Vector2(654, 206)
 
 [node name="Ring34" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(674, 202)
+position = Vector2(671, 206)
 
 [node name="Ring35" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(691, 202)
+position = Vector2(688, 206)
 
 [node name="Ring36" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(708, 202)
+position = Vector2(705, 206)
 
 [node name="Ring37" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(724, 202)
+position = Vector2(721, 206)
 
 [node name="Ring38" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(741, 202)
+position = Vector2(738, 206)
 
 [node name="Ring39" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(758, 202)
+position = Vector2(755, 206)
 
 [node name="Ring40" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(775, 202)
+position = Vector2(772, 206)
 
 [node name="Ring41" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(657, 183)
+position = Vector2(654, 187)
 
 [node name="Ring42" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(674, 183)
+position = Vector2(671, 187)
 
 [node name="Ring43" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(691, 183)
+position = Vector2(688, 187)
 
 [node name="Ring44" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(708, 183)
+position = Vector2(705, 187)
 
 [node name="Ring45" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(724, 183)
+position = Vector2(721, 187)
 
 [node name="Ring46" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(741, 183)
+position = Vector2(738, 187)
 
 [node name="Ring47" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(758, 183)
+position = Vector2(755, 187)
 
 [node name="Ring48" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(775, 183)
+position = Vector2(772, 187)
 
 [node name="Ring49" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1114, 269)
+position = Vector2(1117, 276)
 
 [node name="Ring50" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1131, 269)
+position = Vector2(1134, 276)
 
 [node name="Ring51" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1148, 269)
+position = Vector2(1151, 276)
 
 [node name="Ring52" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1165, 269)
+position = Vector2(1168, 276)
 
 [node name="Ring53" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1181, 269)
+position = Vector2(1184, 276)
 
 [node name="Ring54" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1198, 269)
+position = Vector2(1201, 276)
 
 [node name="Ring55" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1215, 269)
+position = Vector2(1218, 276)
 
 [node name="Ring56" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1232, 269)
+position = Vector2(1235, 276)
 
 [node name="Ring57" parent="." instance=ExtResource("8_inlfm")]
 position = Vector2(1371, 264)
 
 [node name="Ring58" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1674, 291)
+position = Vector2(1678, 293)
 
 [node name="Ring59" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1691, 291)
+position = Vector2(1695, 293)
 
 [node name="Ring60" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1708, 291)
+position = Vector2(1712, 293)
 
 [node name="Ring61" parent="." instance=ExtResource("8_inlfm")]
 position = Vector2(1364, 280)
 
 [node name="Ring62" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1813, 270)
+position = Vector2(1812, 278)
 
 [node name="Ring63" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1830, 270)
+position = Vector2(1829, 278)
 
 [node name="Ring64" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1847, 270)
+position = Vector2(1846, 278)
 
 [node name="Ring65" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(943, 222)
+position = Vector2(943, 229)
 
 [node name="Ring66" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(960, 222)
+position = Vector2(960, 229)
 
 [node name="Ring67" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(977, 222)
+position = Vector2(977, 229)
 
 [node name="Ring68" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1583, 291)
+position = Vector2(1583, 293)
 
 [node name="Ring69" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1599, 291)
+position = Vector2(1601, 293)
 
 [node name="Ring70" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1616, 291)
+position = Vector2(1620, 293)
 
 [node name="Ring71" parent="." instance=ExtResource("8_inlfm")]
 position = Vector2(1417, 291)
@@ -1738,22 +1739,22 @@ position = Vector2(1417, 291)
 position = Vector2(1434, 291)
 
 [node name="Ring73" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(943, 203)
+position = Vector2(943, 210)
 
 [node name="Ring74" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(960, 203)
+position = Vector2(960, 210)
 
 [node name="Ring75" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(977, 203)
+position = Vector2(977, 210)
 
 [node name="Ring76" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1487, 291)
+position = Vector2(1486, 294)
 
 [node name="Ring77" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1503, 291)
+position = Vector2(1502, 294)
 
 [node name="Ring78" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1520, 291)
+position = Vector2(1519, 294)
 
 [node name="Ring79" parent="." instance=ExtResource("8_inlfm")]
 position = Vector2(1388, 255)
@@ -1762,19 +1763,19 @@ position = Vector2(1388, 255)
 position = Vector2(1406, 257)
 
 [node name="Ring81" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(2692, 432)
+position = Vector2(2694, 436)
 
 [node name="Ring82" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(2709, 432)
+position = Vector2(2711, 436)
 
 [node name="Ring83" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(2726, 432)
+position = Vector2(2728, 436)
 
 [node name="Ring84" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(2743, 432)
+position = Vector2(2745, 436)
 
 [node name="Ring85" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(2759, 432)
+position = Vector2(2761, 436)
 
 [node name="Ring86" parent="." instance=ExtResource("8_inlfm")]
 position = Vector2(2392, 320)
@@ -1834,28 +1835,28 @@ position = Vector2(2437, 286)
 position = Vector2(2427, 307)
 
 [node name="Ring105" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1864, 270)
+position = Vector2(1863, 278)
 
 [node name="Ring106" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1881, 270)
+position = Vector2(1880, 278)
 
 [node name="Ring107" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1898, 270)
+position = Vector2(1897, 278)
 
 [node name="Ring108" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1915, 270)
+position = Vector2(1914, 278)
 
 [node name="Ring109" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1931, 270)
+position = Vector2(1930, 278)
 
 [node name="Ring110" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1948, 270)
+position = Vector2(1947, 278)
 
 [node name="Ring111" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1965, 270)
+position = Vector2(1964, 278)
 
 [node name="Ring112" parent="." instance=ExtResource("8_inlfm")]
-position = Vector2(1982, 270)
+position = Vector2(1981, 278)
 
 [node name="Ring113" parent="." instance=ExtResource("8_inlfm")]
 position = Vector2(1263, -77)
@@ -1952,3 +1953,168 @@ position = Vector2(1569, -202)
 
 [node name="Ring144" parent="." instance=ExtResource("8_inlfm")]
 position = Vector2(1457, -142)
+
+[node name="Ring145" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1399, 41)
+
+[node name="Ring146" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1416, 41)
+
+[node name="Ring147" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1433, 41)
+
+[node name="Ring148" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1450, 41)
+
+[node name="Ring149" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1467, 41)
+
+[node name="Ring150" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1484, 41)
+
+[node name="Ring151" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1501, 41)
+
+[node name="Ring152" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1517, 41)
+
+[node name="Ring153" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1534, 41)
+
+[node name="Ring154" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1551, 41)
+
+[node name="Ring155" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1568, 41)
+
+[node name="Ring156" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1399, 41)
+
+[node name="Ring157" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1416, 41)
+
+[node name="Ring158" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1433, 41)
+
+[node name="Ring159" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1450, 41)
+
+[node name="Ring160" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1467, 41)
+
+[node name="Ring161" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1484, 41)
+
+[node name="Ring162" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1501, 41)
+
+[node name="Ring163" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1517, 41)
+
+[node name="Ring164" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1534, 41)
+
+[node name="Ring165" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1551, 41)
+
+[node name="Ring166" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1568, 41)
+
+[node name="Ring167" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1586, 41)
+
+[node name="Ring168" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1603, 41)
+
+[node name="Ring169" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1620, 41)
+
+[node name="Ring170" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1637, 41)
+
+[node name="Ring171" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1654, 41)
+
+[node name="Ring172" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1671, 41)
+
+[node name="Ring173" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1688, 41)
+
+[node name="Ring174" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1704, 41)
+
+[node name="Ring175" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1721, 41)
+
+[node name="Ring176" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1738, 41)
+
+[node name="Ring177" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1755, 41)
+
+[node name="Ring178" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1774, 41)
+
+[node name="Ring179" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1791, 41)
+
+[node name="Ring180" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1808, 41)
+
+[node name="Ring181" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1825, 41)
+
+[node name="Ring182" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1842, 41)
+
+[node name="Ring183" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1859, 41)
+
+[node name="Ring184" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1876, 41)
+
+[node name="Ring185" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1892, 41)
+
+[node name="Ring186" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1909, 41)
+
+[node name="Ring187" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1926, 41)
+
+[node name="Ring188" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1943, 41)
+
+[node name="Ring189" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1950, -101)
+
+[node name="Ring190" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1967, -101)
+
+[node name="Ring191" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(1984, -101)
+
+[node name="Ring192" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(2001, -101)
+
+[node name="Ring193" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(2018, -101)
+
+[node name="Ring194" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(2035, -101)
+
+[node name="Ring195" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(2052, -101)
+
+[node name="Ring196" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(2068, -101)
+
+[node name="Ring197" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(2085, -101)
+
+[node name="Ring198" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(2102, -101)
+
+[node name="Ring199" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(2119, -101)
