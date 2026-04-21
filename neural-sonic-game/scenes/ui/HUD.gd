@@ -19,6 +19,11 @@ func _process(delta):
 	time_label.text = "TIME: %02d:%02d" % [minutes, seconds]
 	rings_label.text = "RINGS: %d" % GameManager.rings
 	lives_label.text = "LIVES: %d" % GameManager.lives
+	
+	if GameManager.rings == 100:
+		GameManager.rings -= 100
+		GameManager.lives += 1
+		
 
 func stop_timer():
 	is_running = false
