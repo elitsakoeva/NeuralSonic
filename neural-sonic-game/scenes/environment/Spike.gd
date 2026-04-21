@@ -5,4 +5,5 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		body.hit_spike()
+		var knockback_dir = sign(body.global_position.x - global_position.x)
+		body.hit_spike(knockback_dir)

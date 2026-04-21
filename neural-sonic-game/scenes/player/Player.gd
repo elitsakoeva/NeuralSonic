@@ -55,8 +55,8 @@ func die():
 		await death_screen.show_death(current_level_path)
 	else:
 		get_tree().reload_current_scene()
-
-func hit_spike():
+		
+func hit_spike(knockback_dir: int = 1):
 	if is_dead or is_hit:
 		return
 	
@@ -68,14 +68,12 @@ func hit_spike():
 	sprite.play("hit")
 	
 	velocity.y = -150.0
-	velocity.x = -sign(velocity.x) * 200.0
-	if velocity.x == 0:
-		velocity.x = 200.0
+	velocity.x = knockback_dir * 250.0
 	
 	_scatter_rings()
 	GameManager.rings = 0
 	
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.5).timeout
 	is_hit = false
 
 func _scatter_rings():
