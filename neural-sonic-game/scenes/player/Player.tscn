@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://c5d2maifd2q0c"]
+[gd_scene load_steps=70 format=3 uid="uid://c5d2maifd2q0c"]
 
 [ext_resource type="Texture2D" uid="uid://crbw1gs1j1iye" path="res://assets/sprites/sonic-1-sprites.png" id="1_wr5hl"]
 [ext_resource type="Texture2D" uid="uid://bg3vdh4s3pmac" path="res://assets/sprites/victory/1406c7f7-63a4-4245-9cab-acdb00f8ceaf-0.png" id="2_76i7i"]
@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://cqoj0yfd3dwhp" path="res://assets/sprites/death/a5aa480a-61de-490b-a650-d0d57ea3b427-9.png" id="37_q4eru"]
 [ext_resource type="Texture2D" uid="uid://cyt683f3v1kje" path="res://assets/sprites/death/a5aa480a-61de-490b-a650-d0d57ea3b427-10.png" id="38_ooivl"]
 [ext_resource type="Texture2D" uid="uid://cdur7r5a284qy" path="res://assets/sprites/death/a5aa480a-61de-490b-a650-d0d57ea3b427-11.png" id="39_kk601"]
+[ext_resource type="Script" uid="uid://dpp0s1qecslk7" path="res://scenes/player/ai_controller.gd" id="40_u3hyo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wr5hl"]
 radius = 5.0
@@ -535,3 +536,7 @@ position = Vector2(1, -4)
 scale = Vector2(0.5104167, 0.5104167)
 sprite_frames = SubResource("SpriteFrames_npwbq")
 animation = &"hit"
+
+[node name="AIController2D" type="Node2D" parent="."]
+script = ExtResource("40_u3hyo")
+metadata/_custom_type_script = "uid://gprvk3asi0ax"

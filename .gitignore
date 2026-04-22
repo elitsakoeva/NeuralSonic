@@ -6,3 +6,9 @@ export_presets.cfg
 # Editor
 *.tmp
 *.swp
+
+#AI
+logs/
+models/
+*.zip
+*.onnx

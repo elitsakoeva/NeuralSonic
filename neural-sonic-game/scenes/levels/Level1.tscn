@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cxfevrui7hlyf"]
+[gd_scene load_steps=16 format=3 uid="uid://cxfevrui7hlyf"]
 
 [ext_resource type="PackedScene" uid="uid://c5d2maifd2q0c" path="res://scenes/player/Player.tscn" id="1_1pwbc"]
 [ext_resource type="Script" uid="uid://4rby0jaj2isv" path="res://scenes/levels/Level1.gd" id="1_7d7pp"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://6fpquuwnut0u" path="res://scenes/levels/DeathZone.gd" id="8_brv20"]
 [ext_resource type="PackedScene" uid="uid://bryh1lsgsmiv1" path="res://scenes/environment/Spike.tscn" id="10_e5nfq"]
 [ext_resource type="PackedScene" uid="uid://b1iac132imgd" path="res://scenes/environment/Spring.tscn" id="10_lha2r"]
+[ext_resource type="Script" uid="uid://bg22dvcygpwf3" path="res://addons/godot_rl_agents/sync.gd" id="11_lha2r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_76cw8"]
 texture = ExtResource("3_68ib6")
@@ -4021,3 +4022,7 @@ position = Vector2(1561, -123)
 [node name="Spring" parent="." instance=ExtResource("10_lha2r")]
 position = Vector2(1517, -129)
 scale = Vector2(3, 3)
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("11_lha2r")
+metadata/_custom_type_script = "uid://bg22dvcygpwf3"

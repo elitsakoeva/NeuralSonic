@@ -14,20 +14,22 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-		sprite.flip_h = direction < 0
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	if not GameManager.is_ai_mode:
+		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+			velocity.y = JUMP_VELOCITY
+		var direction := Input.get_axis("ui_left", "ui_right")
+		if direction:
+			velocity.x = direction * SPEED
+			sprite.flip_h = direction < 0
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
 	
 	if is_hit:
 		sprite.play("hit")
 	elif not is_on_floor():
 		sprite.play("jump")
-	elif direction != 0:
+	elif velocity.x != 0:
 		sprite.play("run")
 	else:
 		sprite.play("idle")
@@ -37,6 +39,13 @@ func _physics_process(delta: float) -> void:
 func die():
 	if is_dead:
 		return
+		
+	var ai = get_node_or_null("AIController2D")
+	if ai:
+		ai.reward -= 5.0
+		ai.done = true
+		
+	
 	is_dead = true
 	sprite.play("death")
 	set_physics_process(false)
@@ -87,3 +96,16 @@ func _scatter_rings():
 		var angle = (i / float(ring_count)) * TAU
 		var speed = randf_range(100, 200)
 		ring.launch(Vector2(cos(angle), sin(angle)) * speed)
+
+
+func ai_move(direction: int):
+	print("ai_move called with: ", direction)
+	if direction != 0:
+		velocity.x = direction * SPEED
+		sprite.flip_h = direction < 0
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+func ai_jump():
+	if is_on_floor():
+		velocity.y = JUMP_VELOCITY
