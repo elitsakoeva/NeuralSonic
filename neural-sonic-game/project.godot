@@ -20,6 +20,10 @@ run/autoload_on_startup=false
 
 GameManager="*res://scripts/game/game_manager.gd"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_rl_agents/plugin.cfg")
+
 [global_group]
 
 hud=""

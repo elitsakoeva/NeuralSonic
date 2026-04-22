@@ -1,0 +1,3 @@
+godot-rl
+stable-baselines3
+torch
