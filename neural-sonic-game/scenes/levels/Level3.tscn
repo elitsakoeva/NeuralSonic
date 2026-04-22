@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://f7h8jra26ytu"]
+[gd_scene load_steps=16 format=3 uid="uid://f7h8jra26ytu"]
 
 [ext_resource type="PackedScene" uid="uid://bryh1lsgsmiv1" path="res://scenes/environment/Spike.tscn" id="1_3825t"]
 [ext_resource type="Script" uid="uid://bw1gtu8u3qpxn" path="res://scenes/levels/Level3.gd" id="1_stl8g"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://6fpquuwnut0u" path="res://scenes/levels/DeathZone.gd" id="6_6qpip"]
 [ext_resource type="PackedScene" uid="uid://b1iac132imgd" path="res://scenes/environment/Spring.tscn" id="8_x3k3d"]
 [ext_resource type="PackedScene" uid="uid://qb47cqrvaxbn" path="res://scenes/ui/HUD.tscn" id="10_h66bl"]
+[ext_resource type="Script" uid="uid://bg22dvcygpwf3" path="res://addons/godot_rl_agents/sync.gd" id="11_vnuxi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f3pvd"]
 texture = ExtResource("2_6qpip")
@@ -1304,7 +1305,7 @@ sources/1 = SubResource("TileSetAtlasSource_f3pvd")
 distance = -5.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f3pvd"]
-size = Vector2(752, 139)
+size = Vector2(1195, 250.5)
 
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_stl8g")
@@ -2845,7 +2846,15 @@ position = Vector2(0, 95)
 script = ExtResource("6_6qpip")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
-position = Vector2(587, 77.5)
+position = Vector2(593, 136)
+shape = SubResource("RectangleShape2D_f3pvd")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(3015, 725)
+shape = SubResource("RectangleShape2D_f3pvd")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(-775, 85)
 shape = SubResource("RectangleShape2D_f3pvd")
 
 [node name="Spring" parent="." instance=ExtResource("8_x3k3d")]
@@ -2869,3 +2878,7 @@ position = Vector2(1227, 47)
 scale = Vector2(3, 3)
 
 [node name="Hud" parent="." instance=ExtResource("10_h66bl")]
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("11_vnuxi")
+metadata/_custom_type_script = "uid://bg22dvcygpwf3"
