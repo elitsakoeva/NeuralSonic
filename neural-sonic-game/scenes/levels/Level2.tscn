@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bm3hwwcnqug57"]
+[gd_scene load_steps=16 format=3 uid="uid://bm3hwwcnqug57"]
 
 [ext_resource type="Texture2D" uid="uid://b0nkyunjtf621" path="res://assets/tilesets/tileset4.png" id="1_a3cud"]
 [ext_resource type="Script" uid="uid://ddymh1x8pnk7s" path="res://scenes/levels/Level2.gd" id="1_e5vnl"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bmeumx3ayofqs" path="res://scenes/environment/Ring.tscn" id="8_inlfm"]
 [ext_resource type="PackedScene" uid="uid://b1iac132imgd" path="res://scenes/environment/Spring.tscn" id="9_dpm1s"]
 [ext_resource type="PackedScene" uid="uid://bryh1lsgsmiv1" path="res://scenes/environment/Spike.tscn" id="10_mcssb"]
+[ext_resource type="Script" uid="uid://bg22dvcygpwf3" path="res://addons/godot_rl_agents/sync.gd" id="11_mcssb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1xtnv"]
 texture = ExtResource("1_a3cud")
@@ -1485,7 +1486,7 @@ sources/0 = SubResource("TileSetAtlasSource_1xtnv")
 distance = -5.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_inlfm"]
-size = Vector2(3302, 229)
+size = Vector2(1751, 229)
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_e5vnl")
@@ -1522,6 +1523,10 @@ script = ExtResource("7_twycr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
 position = Vector2(2965, 139.5)
+shape = SubResource("RectangleShape2D_inlfm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(-679.5, -272)
 shape = SubResource("RectangleShape2D_inlfm")
 
 [node name="Ring" parent="." instance=ExtResource("8_inlfm")]
@@ -2453,3 +2458,7 @@ position = Vector2(2670, 438)
 
 [node name="Spike9" parent="." instance=ExtResource("10_mcssb")]
 position = Vector2(3237, 406)
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("11_mcssb")
+metadata/_custom_type_script = "uid://bg22dvcygpwf3"
