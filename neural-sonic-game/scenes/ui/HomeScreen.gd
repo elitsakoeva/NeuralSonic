@@ -16,6 +16,9 @@ func _on_play_pressed():
 
 func _on_ai_pressed():
 	GameManager.is_ai_mode = true
+	var project_path = ProjectSettings.globalize_path("res://")
+	var train_script = project_path + "ai_training/train.py"
+	OS.create_process("py", ["-3.11", train_script])
 	get_tree().change_scene_to_file("res://scenes/levels/Level1.tscn")
 
 func _on_exit_pressed():

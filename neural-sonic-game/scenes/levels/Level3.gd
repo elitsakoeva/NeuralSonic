@@ -3,10 +3,14 @@ extends Node2D
 @export var ring_scene: PackedScene
 
 func _ready():
-	GameManager.is_ai_mode = true
 	GameManager.rings = 0
 	
-	if not GameManager.is_ai_mode:
+	if GameManager.is_ai_mode:
+		var ai = $Player/AIController2D
+		if ai:
+			ai.control_mode = AIController2D.ControlModes.TRAINING
+	else:
+		GameManager.is_ai_mode = false
 		var transition = preload("res://scenes/ui/ZoneTransition.tscn").instantiate()
 		add_child(transition)
-		await transition.show_transition("PINK ZONE", "ACT 1")
+		await transition.show_transition("CIAN ZONE", "ACT 3")
