@@ -55,3 +55,13 @@ func set_action(action) -> void:
 		player.ai_move(0)
 	if action["jump"] == 1:
 		player.ai_jump()
+		
+func _physics_process(delta):
+	super._physics_process(delta)
+	if needs_reset:
+		needs_reset = false
+		done = true
+
+func _ready():
+	super._ready()
+	print("AI Controller ready!")

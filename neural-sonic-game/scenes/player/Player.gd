@@ -39,20 +39,23 @@ func _physics_process(delta: float) -> void:
 func die():
 	if is_dead:
 		return
-		
+	
+	is_dead = true
+	set_physics_process(false)
+	
 	var ai = get_node_or_null("AIController2D")
 	if ai:
 		ai.reward -= 5.0
 		ai.done = true
-		
+		position = Vector2(0, 30)
+		velocity = Vector2.ZERO
+		is_dead = false
+		set_physics_process(true)
+		return
 	
-	is_dead = true
 	sprite.play("death")
-	set_physics_process(false)
-	
 	var tween = create_tween()
 	tween.tween_property(self, "position:y", position.y - 25, 0.2)
-	
 	await get_tree().create_timer(0.5).timeout
 	
 	GameManager.lives -= 1
