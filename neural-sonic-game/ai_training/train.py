@@ -1,33 +1,38 @@
 from godot_rl.wrappers.stable_baselines_wrapper import StableBaselinesGodotEnv
 from stable_baselines3 import PPO
 import os
+import torch
 
 def train():
+    print(f"Using device: {'GPU - ' + torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU'}")
+    
     env = StableBaselinesGodotEnv(
-        env_path = None,
-        show_window = True,
-        speedup = 1
+        env_path=None,
+        show_window=True,
+        speedup=10
     )
-
+    
     model = PPO(
         "MultiInputPolicy",
         env,
         verbose=1,
-        n_steps=2048,
-        batch_size=64,
-        learning_rate=0.0003,
+        n_steps=1024,
+        batch_size=128,
+        learning_rate=0.001,
+        n_epochs=10,
+        gamma=0.95,
+        device="cuda",
         tensorboard_log="./logs/"
     )
-
+    
     print("Training starts.")
-    model.learn(total_timesteps = 500_000)
-
-    os.makedirs("models", exist_ok = True)
+    model.learn(total_timesteps=500_000)
+    
+    os.makedirs("models", exist_ok=True)
     model.save("models/sonic_ai")
-    print("Model saved. ")
-
+    print("Model saved!")
+    
     env.close()
-
 
 if __name__ == "__main__":
     train()

@@ -3,6 +3,19 @@ extends AIController2D
 func get_obs() -> Dictionary:
 	var player = get_parent()
 	
+
+	var space_state = player.get_world_2d().direct_space_state
+	var ray_right = PhysicsRayQueryParameters2D.create(
+		player.global_position,
+		player.global_position + Vector2(100, 0)
+	)
+	var ray_down = PhysicsRayQueryParameters2D.create(
+		player.global_position,
+		player.global_position + Vector2(0, 100)
+	)
+	var result_right = space_state.intersect_ray(ray_right)
+	var result_down = space_state.intersect_ray(ray_down)
+	
 	return {
 		"obs": [
 			player.position.x / 1000.0,
@@ -10,6 +23,8 @@ func get_obs() -> Dictionary:
 			player.velocity.x / 150.0,
 			player.velocity.y / 300.0,
 			float(player.is_on_floor()),
+			float(result_right.size() > 0), 
+			float(result_down.size() > 0),
 		]
 	}
 
