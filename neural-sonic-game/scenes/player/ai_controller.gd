@@ -31,24 +31,24 @@ func get_obs() -> Dictionary:
 func get_reward() -> float:
 	var player = get_parent()
 	var r = 0.0
+
+	r += max(player.velocity.x, 0) * 0.1
 	
-	if player.velocity.x > 0:
-		r += 1.0
-		
 	if player.velocity.x < 0:
+		r -= 10.0
+	
+	if not player.is_on_floor():
 		r -= 0.5
+	
+	if abs(player.velocity.x) < 10:
+		r -= 5.0
 		
-	if player.velocity.x == 0:
-		r -= 0.3
-	
-	r += GameManager.rings * 0.5
-	
 	return r
 
 func get_action_space() -> Dictionary:
 	return {
 		"move": {
-			"size": 3,
+			"size": 2,
 			"action_type": "discrete"
 		},
 		"jump": {
@@ -58,17 +58,15 @@ func get_action_space() -> Dictionary:
 	}
 
 func set_action(action) -> void:
-	print("action received: ", action)
 	var player = get_parent()
 	
 	var move = int(action["move"])
 	if move == 1:
-		player.ai_move(-1)
-	elif move == 2:
 		player.ai_move(1)
 	else:
 		player.ai_move(0)
-	if action["jump"] == 1:
+	
+	if int(action["jump"]) == 1:
 		player.ai_jump()
 		
 func _physics_process(delta):

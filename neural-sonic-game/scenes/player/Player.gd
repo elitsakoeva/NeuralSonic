@@ -46,6 +46,15 @@ func die():
 	var ai = get_node_or_null("AIController2D")
 	if ai:
 		ai.reward -= 5.0
+		GameManager.lives -= 1
+		
+		if GameManager.lives <= 0:
+			ai.reward -= 50.0
+			GameManager.lives = 3
+			GameManager.rings = 0
+			for ring in get_tree().get_nodes_in_group("rings"):
+				ring.queue_free()
+		
 		ai.done = true
 		position = Vector2(0, 30)
 		velocity = Vector2.ZERO
@@ -94,7 +103,7 @@ func _scatter_rings():
 	
 	for i in range(ring_count):
 		var ring = ring_scene.instantiate()
-		get_parent().add_child(ring)
+		get_parent().add_child.call_deferred(ring)
 		ring.global_position = global_position
 		var angle = (i / float(ring_count)) * TAU
 		var speed = randf_range(100, 200)

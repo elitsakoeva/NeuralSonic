@@ -1486,7 +1486,7 @@ sources/0 = SubResource("TileSetAtlasSource_1xtnv")
 distance = -5.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_inlfm"]
-size = Vector2(1751, 229)
+size = Vector2(767.25, 229)
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_e5vnl")
@@ -1522,11 +1522,15 @@ position = Vector2(0, 450)
 script = ExtResource("7_twycr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
-position = Vector2(2965, 139.5)
+position = Vector2(3598, 98)
 shape = SubResource("RectangleShape2D_inlfm")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="DeathZone"]
-position = Vector2(-679.5, -272)
+position = Vector2(-158, -269)
+shape = SubResource("RectangleShape2D_inlfm")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(1610, 23)
 shape = SubResource("RectangleShape2D_inlfm")
 
 [node name="Ring" parent="." instance=ExtResource("8_inlfm")]
@@ -2138,6 +2142,15 @@ position = Vector2(1964, 278)
 [node name="Ring112" parent="." instance=ExtResource("8_inlfm")]
 position = Vector2(1981, 278)
 
+[node name="Ring291" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(2137, 373)
+
+[node name="Ring292" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(2154, 373)
+
+[node name="Ring293" parent="." instance=ExtResource("8_inlfm")]
+position = Vector2(2171, 373)
+
 [node name="Ring113" parent="." instance=ExtResource("8_inlfm")]
 position = Vector2(1263, -72)
 
@@ -2442,7 +2455,7 @@ position = Vector2(918, 85)
 position = Vector2(1301, 54)
 
 [node name="Spike7" parent="." instance=ExtResource("10_mcssb")]
-position = Vector2(2115, 374)
+position = Vector2(2248, 374)
 
 [node name="Spike10" parent="." instance=ExtResource("10_mcssb")]
 position = Vector2(2032, 86)
