@@ -26,6 +26,7 @@ func _on_switch():
 	get_tree().paused = false
 	GameManager.is_ai_mode = not GameManager.is_ai_mode
 	GameManager.pending_switch = true
+	queue_free()
 	get_tree().change_scene_to_file("res://scenes/ui/HomeScreen.tscn")
 
 func _on_exit():
