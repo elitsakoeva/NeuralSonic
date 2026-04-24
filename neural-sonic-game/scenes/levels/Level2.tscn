@@ -2474,4 +2474,5 @@ position = Vector2(3237, 406)
 
 [node name="Sync" type="Node" parent="."]
 script = ExtResource("11_mcssb")
+control_mode = 0
 metadata/_custom_type_script = "uid://bg22dvcygpwf3"
