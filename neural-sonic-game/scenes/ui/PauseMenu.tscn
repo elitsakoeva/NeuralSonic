@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b17wi3uv6uix3"]
+[gd_scene load_steps=5 format=3 uid="uid://b17wi3uv6uix3"]
 
 [ext_resource type="Script" uid="uid://df3waxqhvkibe" path="res://scenes/ui/PauseMenu.gd" id="1_7ida2"]
 [ext_resource type="Shader" uid="uid://cricod5g3x7va" path="res://scenes/ui/PauseMenu.gdshader" id="1_vb6pq"]
+[ext_resource type="FontFile" uid="uid://dw8khfqxus3k5" path="res://assets/fonts/mania.ttf" id="3_n5dsq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7ida2"]
 shader = ExtResource("1_vb6pq")
@@ -40,17 +41,25 @@ theme_override_constants/separation = 12
 
 [node name="ModeLabel" type="Label" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_n5dsq")
+theme_override_font_sizes/font_size = 48
 text = "PLAYER MODE"
 horizontal_alignment = 1
 
 [node name="SwitchButton" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_n5dsq")
+theme_override_font_sizes/font_size = 32
 text = "Switch mode"
 
 [node name="ResumeButton" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_n5dsq")
+theme_override_font_sizes/font_size = 32
 text = "Resume"
 
 [node name="ExitButton" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_n5dsq")
+theme_override_font_sizes/font_size = 32
 text = "Exit"
