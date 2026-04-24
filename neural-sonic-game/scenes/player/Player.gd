@@ -11,6 +11,9 @@ var current_level_path: String = ""
 
 func _ready():
 	current_level_path = get_tree().current_scene.scene_file_path
+	is_hit = false
+	is_dead = false
+	sprite.play("idle")
 
 func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta
@@ -41,42 +44,41 @@ func die():
 		return
 	
 	is_dead = true
+	sprite.play("death")
 	set_physics_process(false)
 	
-	var ai = get_node_or_null("AIController2D")
-	if ai:
-		ai.reward -= 5.0
-		GameManager.lives -= 1
-		
-		if GameManager.lives <= 0:
-			ai.reward -= 50.0
-			GameManager.lives = 3
-			GameManager.rings = 0
-			for ring in get_tree().get_nodes_in_group("rings"):
-				ring.queue_free()
-		
-		ai.done = true
-		position = Vector2(0, 30)
-		velocity = Vector2.ZERO
-		is_dead = false
-		set_physics_process(true)
-		return
-	
-	sprite.play("death")
 	var tween = create_tween()
 	tween.tween_property(self, "position:y", position.y - 25, 0.2)
 	await get_tree().create_timer(0.5).timeout
 	
+	var ai = get_node_or_null("AIController2D")
+	if ai:
+		ai.reward -= 5.0
+		ai.done = true
+	
 	GameManager.lives -= 1
+	GameManager.rings = 0
+	
 	if GameManager.lives <= 0:
 		GameManager.lives = 3
-		GameManager.rings = 0
 		var death_screen = preload("res://scenes/ui/DeathScreen.tscn").instantiate()
 		get_tree().root.add_child(death_screen)
 		await death_screen.show_death(current_level_path)
 	else:
+		var trans = preload("res://scenes/ui/ZoneTransition.tscn").instantiate()
+		get_tree().root.add_child(trans)
+		var zone = "PINK ZONE"
+		var act = "ACT 1"
+		if "Level2" in current_level_path:
+			zone = "GREEN ZONE"
+			act = "ACT 2"
+		elif "Level3" in current_level_path:
+			zone = "CYAN ZONE"
+			act = "ACT 3"
+		GameManager.is_reloading = true
+		await trans.show_transition(zone, act)
 		get_tree().reload_current_scene()
-		
+
 func hit_spike(knockback_dir: int = 1):
 	if is_dead or is_hit:
 		return
@@ -87,10 +89,8 @@ func hit_spike(knockback_dir: int = 1):
 	
 	is_hit = true
 	sprite.play("hit")
-	
 	velocity.y = -150.0
 	velocity.x = knockback_dir * 250.0
-	
 	_scatter_rings()
 	GameManager.rings = 0
 	
@@ -109,9 +109,7 @@ func _scatter_rings():
 		var speed = randf_range(100, 200)
 		ring.launch(Vector2(cos(angle), sin(angle)) * speed)
 
-
 func ai_move(direction: int):
-	print("ai_move called with: ", direction)
 	if direction != 0:
 		velocity.x = direction * SPEED
 		sprite.flip_h = direction < 0

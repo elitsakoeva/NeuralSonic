@@ -8,3 +8,4 @@ var lives: int = 3
 
 var current_zone_name: String = ""
 var current_zone_act: String = ""
+var is_reloading: bool = false

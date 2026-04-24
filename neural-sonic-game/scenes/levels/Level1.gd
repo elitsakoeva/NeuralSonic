@@ -11,7 +11,8 @@ func _ready():
 		if ai:
 			ai.control_mode = AIController2D.ControlModes.TRAINING
 	else:
-		$Sync.control_mode = Sync.ControlModes.HUMAN
-		var transition = preload("res://scenes/ui/ZoneTransition.tscn").instantiate()
-		add_child(transition)
-		await transition.show_transition("PINK ZONE", "ACT 1")
+		if not GameManager.is_reloading:
+			var transition = preload("res://scenes/ui/ZoneTransition.tscn").instantiate()
+			add_child(transition)
+			await transition.show_transition("PINK ZONE", "ACT 1")
+		GameManager.is_reloading = false
