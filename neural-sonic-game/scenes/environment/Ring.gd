@@ -13,6 +13,10 @@ func _physics_process(delta):
 	if velocity != Vector2.ZERO:
 		velocity.y += ring_gravity * delta
 		position += velocity * delta
+		
+		if position.y > 2000:
+			queue_free()
+			return
 
 func launch(vel: Vector2):
 	can_collect = false
@@ -22,6 +26,9 @@ func launch(vel: Vector2):
 		await get_tree().create_timer(1.0).timeout
 		if is_inside_tree():
 			can_collect = true
+		await get_tree().create_timer(4.0).timeout
+		if is_inside_tree():
+			queue_free()
 
 func _on_body_entered(body):
 	if body.name == "Player" and can_collect:

@@ -12,6 +12,7 @@ func _ready():
 			var project_path = ProjectSettings.globalize_path("res://")
 			var train_script = project_path + "ai_training/train.py"
 			GameManager.ai_process_id = OS.create_process("py", ["-3.11", train_script])
+			await _wait_for_server()
 		get_tree().change_scene_to_file("res://scenes/levels/Level1.tscn")
 		return
 	
@@ -19,6 +20,16 @@ func _ready():
 	ai_button.pressed.connect(_on_ai_pressed)
 	exit_button.pressed.connect(_on_exit_pressed)
 
+func _wait_for_server():
+	var connected = false
+	while not connected:
+		var tcp = TCPServer.new()
+		var err = tcp.listen(11008, "127.0.0.1")
+		if err != OK:
+			connected = true
+		else:
+			tcp.stop()
+			await get_tree().create_timer(0.5).timeout
 func _on_play_pressed():
 	GameManager.is_ai_mode = false
 	get_tree().change_scene_to_file("res://scenes/levels/Level1.tscn")

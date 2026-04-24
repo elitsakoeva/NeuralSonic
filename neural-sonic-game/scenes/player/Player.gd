@@ -88,6 +88,19 @@ func die():
 	if ai:
 		ai.reward -= 5.0
 		ai.done = true
+		
+		if GameManager.is_ai_mode:
+			GameManager.lives -= 1
+			GameManager.rings = 0
+			if GameManager.lives <= 0:
+				GameManager.lives = 3
+			is_dead = false
+			is_hit = false
+			position = Vector2(0, 30)
+			velocity = Vector2.ZERO
+			set_physics_process(true)
+			sprite.play("idle")
+			return
 	
 	GameManager.lives -= 1
 	GameManager.rings = 0
@@ -98,25 +111,28 @@ func die():
 		get_tree().root.add_child(death_screen)
 		await death_screen.show_death(current_level_path)
 	else:
-		var trans = preload("res://scenes/ui/ZoneTransition.tscn").instantiate()
-		get_tree().root.add_child(trans)
-		var zone = "PINK ZONE"
-		var act = "ACT 1"
-		if "Level2" in current_level_path:
-			zone = "GREEN ZONE"
-			act = "ACT 2"
-		elif "Level3" in current_level_path:
-			zone = "CYAN ZONE"
-			act = "ACT 3"
-		GameManager.is_reloading = true
-		await trans.show_transition(zone, act)
-		
-		if GameManager.is_ai_mode and GameManager.ai_process_id != -1:
-			OS.kill(GameManager.ai_process_id)
-			var project_path = ProjectSettings.globalize_path("res://")
-			var train_script = project_path + "ai_training/train.py"
-			GameManager.ai_process_id = OS.create_process("py", ["-3.11", train_script])
-		get_tree().reload_current_scene()
+		if GameManager.is_ai_mode:
+			is_dead = false
+			is_hit = false
+			position = Vector2(0, 30)
+			velocity = Vector2.ZERO
+			set_physics_process(true)
+			sprite.play("idle")
+			GameManager.rings = 0
+		else:
+			var trans = preload("res://scenes/ui/ZoneTransition.tscn").instantiate()
+			get_tree().root.add_child(trans)
+			var zone = "PINK ZONE"
+			var act = "ACT 1"
+			if "Level2" in current_level_path:
+				zone = "GREEN ZONE"
+				act = "ACT 2"
+			elif "Level3" in current_level_path:
+				zone = "CYAN ZONE"
+				act = "ACT 3"
+			GameManager.is_reloading = true
+			await trans.show_transition(zone, act)
+			get_tree().reload_current_scene()
 
 func hit_spike(knockback_dir: int = 1):
 	if is_dead or is_hit:
