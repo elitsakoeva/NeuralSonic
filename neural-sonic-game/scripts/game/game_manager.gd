@@ -10,3 +10,5 @@ var current_zone_name: String = ""
 var current_zone_act: String = ""
 var is_reloading: bool = false
 var pending_switch: bool = false
+
+var ai_process_id: int = -1
