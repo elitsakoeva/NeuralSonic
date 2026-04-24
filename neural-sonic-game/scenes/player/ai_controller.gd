@@ -76,5 +76,6 @@ func _physics_process(delta):
 		done = true
 
 func _ready():
-	super._ready()
-	print("AI Controller ready!")
+	if GameManager.is_ai_mode:
+		super._ready()
+		print("AI Controller ready!")

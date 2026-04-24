@@ -14,6 +14,12 @@ func _ready():
 	is_hit = false
 	is_dead = false
 	sprite.play("idle")
+	visible = false
+
+	if GameManager.is_reloading:
+		set_physics_process(false)
+		await get_tree().create_timer(0.5).timeout
+		set_physics_process(true)
 
 func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta

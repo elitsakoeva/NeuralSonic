@@ -535,8 +535,9 @@ shape = SubResource("CircleShape2D_wr5hl")
 position = Vector2(1, -4)
 scale = Vector2(0.5104167, 0.5104167)
 sprite_frames = SubResource("SpriteFrames_npwbq")
-animation = &"hit"
+animation = &"idle"
 
 [node name="AIController2D" type="Node2D" parent="."]
 script = ExtResource("40_u3hyo")
+control_mode = 1
 metadata/_custom_type_script = "uid://gprvk3asi0ax"
