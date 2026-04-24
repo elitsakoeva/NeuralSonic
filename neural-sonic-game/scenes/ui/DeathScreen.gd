@@ -49,5 +49,10 @@ func show_death(level_path: String):
 	GameManager.is_reloading = true
 	await trans.show_transition(zone, act)
 	
+	if GameManager.is_ai_mode and GameManager.ai_process_id != -1:
+		OS.kill(GameManager.ai_process_id)
+		var project_path = ProjectSettings.globalize_path("res://")
+		var train_script = project_path + "ai_training/train.py"
+		GameManager.ai_process_id = OS.create_process("py", ["-3.11", train_script])
 	queue_free()
 	get_tree().change_scene_to_file.call_deferred(level_path)
