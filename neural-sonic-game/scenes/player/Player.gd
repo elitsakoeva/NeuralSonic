@@ -7,6 +7,9 @@ var is_dead: bool = false
 var is_hit: bool = false
 var current_level_path: String = ""
 
+var pause_menu_scene = preload("res://scenes/ui/PauseMenu.tscn")
+var pause_menu_instance = null
+
 @onready var sprite = $AnimatedSprite2D
 
 func _ready():
@@ -20,6 +23,30 @@ func _ready():
 		set_physics_process(false)
 		await get_tree().create_timer(0.5).timeout
 		set_physics_process(true)
+		
+		
+func _unhandled_input(event):
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_ESCAPE:
+			if get_tree().paused:
+				_close_pause_menu()
+			else:
+				_open_pause_menu()
+
+func _open_pause_menu():
+	if pause_menu_instance != null:
+		return
+	get_tree().paused = true
+	pause_menu_instance = pause_menu_scene.instantiate()
+	pause_menu_instance.process_mode = Node.PROCESS_MODE_ALWAYS
+	get_tree().root.add_child(pause_menu_instance)
+
+func _close_pause_menu():
+	if pause_menu_instance:
+		pause_menu_instance.queue_free()
+		pause_menu_instance = null
+	get_tree().paused = false
+	 
 
 func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta

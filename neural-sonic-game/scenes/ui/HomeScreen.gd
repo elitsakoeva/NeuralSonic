@@ -6,6 +6,11 @@ extends Control
 
 
 func _ready():
+	if GameManager.pending_switch:
+		GameManager.pending_switch = false
+		get_tree().change_scene_to_file("res://scenes/levels/Level1.tscn")
+		return
+	
 	play_button.pressed.connect(_on_play_pressed)
 	ai_button.pressed.connect(_on_ai_pressed)
 	exit_button.pressed.connect(_on_exit_pressed)
