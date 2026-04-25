@@ -4,18 +4,20 @@ extends Control
 @onready var ai_button = $AIMode
 @onready var exit_button = $Exit
 
-
 func _ready():
 	if GameManager.pending_switch:
 		GameManager.pending_switch = false
 		if GameManager.is_ai_mode:
+			$LoadingLabel.text = "Training with your moves..."
+			$LoadingLabel.visible = true
+			$Play.visible = false
+			$AIMode.visible = false
+			$Exit.visible = false
 			var project_path = ProjectSettings.globalize_path("res://")
 			var bc_script = project_path + "ai_training/behavioral_cloning.py"
 			var train_script = project_path + "ai_training/train.py"
 			var output = []
 			OS.execute("python", [bc_script], output, true)
-			print("BC output: ", output)
-			
 			GameManager.ai_process_id = OS.create_process("python", [train_script])
 			await get_tree().create_timer(2.0).timeout
 		get_tree().change_scene_to_file("res://scenes/levels/Level1.tscn")
