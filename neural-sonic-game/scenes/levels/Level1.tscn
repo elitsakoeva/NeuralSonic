@@ -3799,9 +3799,6 @@ script = ExtResource("8_brv20")
 position = Vector2(1952.25, -66)
 shape = SubResource("RectangleShape2D_m00rq")
 
-[node name="Spike" parent="." instance=ExtResource("10_e5nfq")]
-position = Vector2(365, -41)
-
 [node name="Spike2" parent="." instance=ExtResource("10_e5nfq")]
 position = Vector2(315, -89)
 

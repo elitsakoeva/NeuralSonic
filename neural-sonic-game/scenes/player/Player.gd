@@ -10,9 +10,15 @@ var current_level_path: String = ""
 var pause_menu_scene = preload("res://scenes/ui/PauseMenu.tscn")
 var pause_menu_instance = null
 
+var recording: bool = false
+var recorded_data: Array = []
+
 @onready var sprite = $AnimatedSprite2D
 
 func _ready():
+	if not GameManager.is_ai_mode:
+		recording = true
+	
 	current_level_path = get_tree().current_scene.scene_file_path
 	is_hit = false
 	is_dead = false
@@ -24,6 +30,60 @@ func _ready():
 		await get_tree().create_timer(0.5).timeout
 		set_physics_process(true)
 		
+		
+
+func _record_step():
+	if not recording:
+		return
+	
+	var player = self
+	var space_state = get_world_2d().direct_space_state
+	var ray_right = PhysicsRayQueryParameters2D.create(
+		global_position,
+		global_position + Vector2(100, 0)
+	)
+	var ray_down = PhysicsRayQueryParameters2D.create(
+		global_position,
+		global_position + Vector2(0, 100)
+	)
+	var result_right = space_state.intersect_ray(ray_right)
+	var result_down = space_state.intersect_ray(ray_down)
+	
+	var obs = [
+		position.x / 1000.0,
+		position.y / 500.0,
+		velocity.x / 150.0,
+		velocity.y / 300.0,
+		float(is_on_floor()),
+		float(result_right.size() > 0),
+		float(result_down.size() > 0),
+	]
+	
+	var move = 0
+	var jump = 0
+	if Input.is_action_pressed("ui_right"):
+		move = 1
+	if Input.is_action_just_pressed("ui_accept"):
+		jump = 1
+	
+	recorded_data.append({
+		"obs": obs,
+		"move": move,
+		"jump": jump
+	})
+		
+		
+
+func save_recording():
+	if recorded_data.is_empty():
+		return
+	
+	var file = FileAccess.open("res://ai_training/recordings/demo.json", FileAccess.WRITE)
+	if file:
+		file.store_string(JSON.stringify(recorded_data))
+		file.close()
+		print("saved %d steps." % recorded_data.size())
+		recorded_data = []
 		
 func _unhandled_input(event):
 	if event is InputEventKey and event.pressed:
@@ -60,6 +120,7 @@ func _physics_process(delta: float) -> void:
 			sprite.flip_h = direction < 0
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
+		_record_step()
 	
 	if is_hit:
 		sprite.play("hit")
@@ -77,6 +138,7 @@ func die():
 		return
 	
 	is_dead = true
+	save_recording()
 	sprite.play("death")
 	set_physics_process(false)
 	

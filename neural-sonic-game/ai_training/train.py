@@ -5,6 +5,19 @@ import os
 import torch
 
 def train():
+    import subprocess
+    import sys
+    
+    recordings_path = os.path.join(os.path.dirname(__file__), "recordings/")
+    bc_script = os.path.join(os.path.dirname(__file__), "behavioral_cloning.py")
+    
+    if os.path.exists(recordings_path) and len(os.listdir(recordings_path)) > 0:
+        print("training with player recordings first...")
+        subprocess.run([sys.executable, bc_script], cwd=os.path.dirname(__file__))
+        for f in os.listdir(recordings_path):
+            os.remove(os.path.join(recordings_path, f))
+        print("Done! Starting PPO training...")
+
     print(f"Using device: {'GPU - ' + torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU'}")
     
     env = StableBaselinesGodotEnv(
@@ -14,6 +27,8 @@ def train():
     )
     
     model_path = "models/sonic_ai.zip"
+    bc_path = "models/behavioral_cloning.pth"
+
     if os.path.exists(model_path):
         print("Loading existing model...")
         model = PPO.load(model_path, env=env, device="cuda")
@@ -31,9 +46,20 @@ def train():
             device="cuda",
             tensorboard_log="./logs/"
         )
+        
+        if os.path.exists(bc_path):
+            print("Loading Behavioral Cloning weights...")
+            bc_weights = torch.load(bc_path)
+            policy = model.policy
+            with torch.no_grad():
+                policy.mlp_extractor.policy_net[0].weight.copy_(bc_weights["network.0.weight"])
+                policy.mlp_extractor.policy_net[0].bias.copy_(bc_weights["network.0.bias"])
+                policy.mlp_extractor.policy_net[2].weight.copy_(bc_weights["network.2.weight"])
+                policy.mlp_extractor.policy_net[2].bias.copy_(bc_weights["network.2.bias"])
+            print("BC weights loaded!")
     
     checkpoint = CheckpointCallback(
-        save_freq=10000,
+        save_freq=1000,
         save_path="./models/",
         name_prefix="sonic_checkpoint"
     )
