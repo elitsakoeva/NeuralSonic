@@ -18,6 +18,8 @@ func _ready():
 			var train_script = project_path + "ai_training/train.py"
 			var output = []
 			OS.execute("python", [bc_script], output, true)
+			print("BC output: ", output)
+			
 			GameManager.ai_process_id = OS.create_process("python", [train_script])
 			await get_tree().create_timer(2.0).timeout
 		get_tree().change_scene_to_file("res://scenes/levels/Level1.tscn")
