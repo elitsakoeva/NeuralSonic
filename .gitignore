@@ -10,5 +10,6 @@ export_presets.cfg
 #AI
 logs/
 models/
+recordings/
 *.zip
 *.onnx
